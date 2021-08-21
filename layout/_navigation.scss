@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+.nav {
+  position: relative;
+  z-index: 1;
+  background-image: v.$whiteGradient;
+  padding: 1.2rem 2.8rem;
+  box-shadow: v.$boxshadow;
+
+  &-header {
+    a:hover {
+      border-bottom: none;
+    }
+    .logo {
+      width: 15rem;
+    }
+
+    // Nav Toggle in buttons.scss
+  }
+
+  &-menu-cntr {
+    height: 0;
+    overflow: hidden;
+    transition: v.$transition;
+
+    .menu-list {
+      padding: 1rem 0 0 .5rem;
+
+      &-item {
+        padding: .7rem 0;
+        &:last-of-type {
+          padding-bottom: 1.2rem;
+        }
+
+        a:hover {
+          border-bottom: 1px solid v.$blueYonder;
+        }
+      }
+    }
+  }
+
+  // Goes on Nav element
+  &.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 0 2.8rem;
+    background: #fefefe;
+    transition: v.$transition;
+  }
+}

@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+.nav-toggle {
+  font-size: 2.2rem;
+  padding: .5rem .8rem .4rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid v.$blueYonder;
+    border-radius: .5rem;
+  }
+  &:active {
+    color: v.$blueYonder;
+    border-color: #010101;
+  }
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background: transparent;
+  padding: 1.5rem 0;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border: 2px solid v.$blueYonder;
+  border-radius: .5rem;
+  outline: none;
+
+  &:hover {
+    background-color: v.$blueYonder;
+    color: #fefefe;
+  }
+
+  &:focus {
+    border: 3px solid v.$blueYonder;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.btt {
+  position: fixed;
+  z-index: 10;
+  bottom: 5rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: v.$saffron !important;
+  padding: .5rem 1rem;
+  border: 2px solid v.$blueYonder;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  animation: bounce 2s ease-in-out infinite;
+  display: block;
+  visibility: hidden;
+  z-index: -100;
+  &:hover {
+    background-color: v.$blueYonder;
+    border-color: v.$saffron;
+    color: v.$saffron;
+  }
+}

@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+.section-portfolio {
+  padding-left: .8rem;
+  padding-right: .8rem;
+  
+  &-content {
+    padding: 1rem 0;
+    
+    .site-item {
+      display: block;
+      margin: 1.5rem 0 4rem;
+
+      &:hover {
+        border-bottom: none;
+      }
+
+      &-img {
+        width: 100%;
+        object-fit: contain;
+        object-position: center top;
+      }
+
+      &-desc {
+        text-align: center;
+        line-height: 1;
+        padding: 0 2rem;
+        margin-bottom: 1.5rem;
+        
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+d%flex {
+  display: flex;
+}
+
+@mixin flexCenter {
+  @extend %flex;
+  align-items: center;
+}
+
+@mixin flexSpaceBetween {
+  @extend %flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin mqH($size1, $size2) {
+  @media only screen and (min-width: $size1), 
+  (max-height: $size2) {
+    @content;
+  }
+}
+
+@mixin mqIpad($size1, $size2) {
+  @media only screen and (min-width: $size1), (max-height: $size2) {
+    @content;
+  }
+}
+
+@function setTextColor($color) {
+  @if(lightness($color) > 50) {
+    @return #010101;
+  } @else {
+    @return #fefefe;
+  }
+}

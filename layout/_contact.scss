@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+.section-contact {
+  min-height: calc(100vh - 125px);
+
+  &-header {
+    margin: 4.5em 0 3rem;
+  }
+
+  &-content {
+    .form {
+      &-control {
+        display: block;
+        position: relative;
+        padding: 1rem 0;
+        margin: 1.5rem 0;
+        border: 1px solid v.$lightGray;
+        border-radius: 5px;
+
+        .input-text {
+          position: absolute;
+          left: 1.5rem;
+          top: 50%;
+          font-weight: 300;
+          letter-spacing: .2rem;
+          transform: translateY(-50%);
+          transition: v.$transition;
+
+          &.target {
+            left: 0;
+            top: 15%;
+            font-size: 1.2rem;
+            letter-spacing: 0;
+            padding: .2rem 0 0 .5rem;
+            transition: v.$transition;
+          }
+        }
+
+        .user-input {
+          display: inherit;
+          width: inherit;
+          padding: .5rem 0 0 1rem;
+          border: none;
+          outline: none;
+          font-size: inherit;
+          font-family: inherit;
+
+          &#message {
+            resize: none;
+          }
+        }
+      }
+    }
+  }
+}

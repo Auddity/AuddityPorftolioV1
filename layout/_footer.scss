@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+.footer {
+  height: 12rem;
+  background-color: v.$blueYonder;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  color: mx.setTextColor(v.$blueYonder);
+
+  &-copy, &-social {
+    flex: 1 1 300px;
+  }
+
+  &-copy {
+    font-size: 1.5rem;
+  }
+
+  &-social {
+    a {
+      font-size: 3rem;
+      padding: 1rem;
+      margin: 0 2rem;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        border: none;
+      }
+
+      &:active, &:hover, &:focus {
+        color: v.$saffron;
+      }
+    }
+  }
+}

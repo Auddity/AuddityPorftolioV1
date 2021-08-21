@@ -1,0 +1,50 @@
+@use '../abstracts/mixins' as mx;
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.dropcap:first-child::first-letter {
+  font-size: 3rem;
+  font-weight: 600;
+  float: left;
+  padding-right: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.flex-center {
+  @include mx.mq(800px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    max-width: 117rem;
+    margin: 0 auto;
+  }
+}
+
+.flex-sb {
+  @include mx.flexSpaceBetween;
+}
+
+.show-menu {
+  height: auto !important;
+}
+
+.show-btn {
+  visibility: visible !important;
+  z-index: 100 !important;
+}
+
+@keyframes bounce {
+  0% { transform: scale(1) }
+  50% { transform: scale(1.2) }
+}

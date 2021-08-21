@@ -1,0 +1,209 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+//*** MOBILE ***//
+@include mx.mqH(736px, 375px) {
+  // Header
+  .hero {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 0;
+    &-content {
+      padding-top: 1rem;
+    }
+  }
+
+  // About Section 
+  .section-about {
+    height: 100%;
+  }
+
+  // Resume
+  .section-resume {
+    &-title {
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Contact
+  .section-contact {
+    margin-bottom: 3rem;
+    &-header {
+      margin-top: 0;
+    }
+    &-content {
+      .form {
+        &-control {
+          &:not(first-of-type) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//*** TABLETS ***//
+@include mx.mqH(768px, 1024px) {
+  // Header
+  .hero {
+    flex-direction: column;
+    margin-top: 20rem;
+  }
+}
+
+//** TABLETS HORIZONTAL **//
+@include mx.mqIpad(1024px, 768px) {
+  // Header
+  .hero {
+    margin-top: 5rem;
+  }
+
+  // About Section
+  .section-about {
+    &-content {
+      &-top {
+        p {
+          width: 25rem;
+        }
+      }
+    }
+  }
+}
+
+
+@include mx.mq(800px) {
+  // Buttons
+  .nav-toggle {
+    display: none;
+  }
+  // Layout-Navigation
+  .nav {
+    background: transparent;
+    box-shadow: none;
+    &.fixed-nav {
+      box-shadow: v.$boxshadow;
+    }
+
+    &-header {
+      .logo {
+        background-color: #fefefe;
+        border-radius: 50%;
+      }
+    }
+
+    &-menu-cntr {
+      height: auto !important;
+
+      .menu-list {
+        display: flex;
+
+        &-item {
+          margin-left: 2.7rem;
+        }
+      }
+    }
+  }
+
+  // Portfolio
+  .section-portfolio {
+    &-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  }
+}
+
+@include mx.mq(813px) {
+  // Base
+  .section {
+    h2 {
+      font-size: 5rem;
+    }
+  }
+  // Buttons
+  .btt {
+    font-size: 2.6rem;
+  }
+
+  // Header 
+  .hero {
+    padding-top: 10rem;
+    flex-direction: column;
+
+    br {
+      display: none;
+    }
+
+    h1 {
+      font-size: 8rem;
+    }
+  }
+
+  // About Section
+  .section-about {
+    &-content {
+      font-size: 1.8rem;
+      width: 40%;
+      margin: 10rem auto 0;
+    }
+  }
+}
+
+//** DESKTOP **//
+@include mx.mq(1024px) {
+  // Portfolio
+  .section-portfolio {
+    &-content {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  // Sound
+  .section-sound {
+    &-content {
+      &-item {
+        video, iframe {
+          width: 650px;
+          height: 450px;
+        }
+      }
+    }
+  }
+
+  // Contact
+  .section-contact {
+    &-header {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-top: 20rem;
+    }
+    &-content {
+      width: 70%;
+      margin: 7rem auto 0;
+    }
+  }
+}
+
+@include mx.mq(1200px) {
+  // Header
+  .hero {
+    margin-top: 5rem;
+  }
+
+  // About Section
+  .section-about {
+    &-content {
+      width: 80%;
+      font-size: 2rem;
+      padding-top: 5rem;
+
+      &-bottom {
+        margin-top: 6rem;
+      }
+    }
+  }
+}
