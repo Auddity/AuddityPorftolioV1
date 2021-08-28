@@ -4,16 +4,23 @@
 .nav {
   position: relative;
   z-index: 1;
+  width: 100%;
   background-image: v.$whiteGradient;
   padding: 1.2rem 2.8rem;
   box-shadow: v.$boxshadow;
-
+  
   &-header {
-    a:hover {
-      border-bottom: none;
-    }
-    .logo {
-      width: 15rem;
+    @include mx.flexCenter;
+    justify-content: space-between;
+
+    a {
+      &:hover {
+        border-bottom: none;
+      }
+
+      .logo {
+        width: 15rem;
+      }
     }
 
     // Nav Toggle in buttons.scss

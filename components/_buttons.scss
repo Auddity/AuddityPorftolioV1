@@ -7,6 +7,7 @@
   background: transparent;
   border-color: transparent;
   cursor: pointer;
+
   &:hover {
     border: 2px solid v.$blueYonder;
     border-radius: .5rem;
@@ -47,7 +48,7 @@
   position: fixed;
   z-index: 10;
   bottom: 5rem;
-  right: 2rem;
+  right: 4rem;
   font-size: 1.5rem;
   color: v.$saffron !important;
   padding: .5rem 1rem;

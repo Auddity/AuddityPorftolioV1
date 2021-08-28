@@ -1,16 +1,10 @@
-d%flex {
+%flex {
   display: flex;
 }
 
 @mixin flexCenter {
   @extend %flex;
   align-items: center;
-}
-
-@mixin flexSpaceBetween {
-  @extend %flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 @mixin mq($size) {

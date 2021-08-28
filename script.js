@@ -1,68 +1,52 @@
-const nav = document.getElementById('nav');
 const navToggle = document.getElementById('nav-toggle');
 const menuContainer = document.getElementById('menu-cntr');
 const menuList = document.getElementById('menu-list');
-const menuItems = document.querySelectorAll('.menu-link')
-const inputs = document.querySelectorAll('.user-input');
-const toTopBtn = document.getElementById('btt');
-const date = document.querySelector('.date');
 
-// Dynamic NavMenu Height
 navToggle.addEventListener('click', () => {
-  const containerHeight = menuContainer.getBoundingClientRect().height;
-  const menuListHeight = menuList.getBoundingClientRect().height;
-  if(containerHeight === 0) {
-    menuContainer.style.height = `${menuListHeight}px`;
-  } else {
-    menuContainer.style.height = 0;
-  };
+  const menuHeight = menuContainer.getBoundingClientRect().height;
+  const listHeight = menuList.getBoundingClientRect().height;
+  
+  menuHeight === 0 ? 
+  menuContainer.style.height = `${listHeight}px` :
+  menuContainer.style.height = 0;
 });
 
-// Fixed Nav
+const nav = document.getElementById('nav');
+const toTop = document.getElementById('btt');
 window.addEventListener('scroll', () => {
-  const scrollHeight = window.pageYOffset;
+  let scrollHeight = window.pageYOffset;
   const navHeight = nav.getBoundingClientRect().height;
-  scrollHeight > 300 ?
-    toTopBtn.classList.add('show-btn') :
-    toTopBtn.classList.remove('show-btn');
 
   scrollHeight > navHeight ?
     nav.classList.add('fixed-nav') :
     nav.classList.remove('fixed-nav');
+
+  scrollHeight > 400 ? 
+    toTop.classList.add('show-btn') :
+    toTop.classList.remove('show-btn');
 });
 
-menuItems.forEach(item => {
-  item.addEventListener('click', e => {
+const links = document.querySelectorAll('.menu-link');
+links.forEach(link => {
+  link.addEventListener('click', e => {
     e.preventDefault();
+
+    const navHeight = nav.getBoundingClientRect().height;
+    const containerHeight = menuContainer.getBoundingClientRect().height;
+
     const id = e.currentTarget.getAttribute('href').slice(1);
     const element = document.getElementById(id);
-    const containerHeight = menuContainer.getBoundingClientRect().height;
-    const navHeight = nav.getBoundingClientRect().height;
-    const fixedNav = nav.classList.contains('fixed-nav');
-    let position = element.offsetTop;
 
-    if(!fixedNav) {
-      position = position - navHeight;
-    }
+    const fixedNav = nav.classList.contains('fixed-nav')
+    let position = element.offsetTop - navHeight;
 
-    if(navHeight > 82) {
-      position = position + containerHeight;
-    }
+    if(!fixedNav) position = position - navHeight + 30;
 
-    window.scrollTo({
-      left: 0, top: position
-    });
+    if(navHeight > 106) position = position + containerHeight;
+
+    window.scrollTo({ left: 0, top: position });
+
     menuContainer.style.height = 0;
-  });
-});
-
-// Contact Text
-inputs.forEach((input, idx) => {
-  let span = inputs[idx].previousElementSibling;
-  input.addEventListener('keyup', e => {
-    e.target.value === '' 
-      ? span.classList.remove('target') 
-      : span.classList.add('target');
   });
 });
 

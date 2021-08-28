@@ -189,11 +189,6 @@
 }
 
 @include mx.mq(1200px) {
-  // Header
-  .hero {
-    margin-top: 5rem;
-  }
-
   // About Section
   .section-about {
     &-content {
