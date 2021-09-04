@@ -1,3 +1,4 @@
+@use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as mx;
 
 html,body {
@@ -24,9 +25,10 @@ h2 {
 a {
   font-family: 'Cairo', sans-serif;
   font-size: 1.8rem;
+  color: #000;
 
   &:hover {
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid v.$blueYonder;
   }
 }
 

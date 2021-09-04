@@ -5,11 +5,11 @@
   padding: 1.5rem .5rem;
   
   &-content {
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
 
     &-item {
       margin: 3rem auto;
+      max-width: 65rem;
 
       video, iframe {
         width: 100%;

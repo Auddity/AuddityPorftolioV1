@@ -3,19 +3,7 @@
 
 .section-about {
   padding: 1.5rem 8%;
-  color: mx.setTextColor(#000);
-
-  &::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: v.$darkOverlay;
-    opacity: .7;
-    z-index: 0;
-  }
+  color: mx.setTextColor(#fff);
 
   &-title, &-content {
     position: relative;
@@ -24,27 +12,6 @@
 
   &-content {
     margin-top: 3rem;
-
-    &-top {
-      width: 100%;
-      margin: 0 auto;
-      flex-wrap: wrap;
-
-      p {
-        width: 80%;
-        margin: 0 auto;
-      }
-    }
-
-    &-bottom {
-      text-align: center;
-      margin-top: 2.5rem;
-      
-      a {
-        color: v.$saffron;
-      }
-    }
-
   }
 
   .section-bg-imgs {

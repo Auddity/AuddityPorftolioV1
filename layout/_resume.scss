@@ -3,8 +3,17 @@
 
 .section-resume {
   &-content {
+    max-width: 80rem;
+    margin-inline: auto;
     .resume-item {
       margin-top: 4rem;
+      padding: 2rem;
+      border: 3px solid v.$saffron;
+      border-radius: 1rem;
+
+      &:nth-child(2) {
+        border-color: v.$blueYonder;
+      }
 
       &-header {
         a {

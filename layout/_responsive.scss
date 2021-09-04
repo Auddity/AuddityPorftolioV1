@@ -165,6 +165,9 @@
   // Sound
   .section-sound {
     &-content {
+      width: 90%;
+      margin-inline: auto;
+
       &-item {
         video, iframe {
           width: 650px;
