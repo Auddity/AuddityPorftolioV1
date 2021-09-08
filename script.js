@@ -50,6 +50,17 @@ links.forEach(link => {
   });
 });
 
+// Form text
+const inputs = document.querySelectorAll('.user-input');
+inputs.forEach((input, idx) => {
+  let span = inputs[idx].previousElementSibling;
+  input.addEventListener('keyup', e => {
+    e.currentTarget.value === '' 
+      ? span.classList.remove('keyed')
+      : span.classList.add('keyed');
+  });
+});
+
 // Footer Date
 let currentYear = new Date().getFullYear();
 date.textContent = currentYear;
