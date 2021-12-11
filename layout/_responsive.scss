@@ -166,6 +166,19 @@
     }
   }
 
+  // Resume
+  .resume-item#item-1 {
+    .resume-project {
+      .resume-project-title {
+        font-size: 1.5rem;
+      }
+
+      .resume-project-desc-list ul li {
+        font-size: 1.45rem;
+      }
+    }
+  }
+
   // Sound
   .section-sound {
     &-content {

@@ -5,6 +5,7 @@
   &-content {
     max-width: 80rem;
     margin-inline: auto;
+
     .resume-item {
       margin-top: 4rem;
       padding: 2rem;
@@ -33,6 +34,33 @@
           & i {
             padding-right: 1.2rem;
             font-size: 1.6rem;
+          }
+        }
+      }
+
+      // Unique format for item-1
+      &#item-1 {
+        .resume-project {
+          padding-block-start: .7rem;
+
+          &-title {
+            font-size: 1.25rem;
+            line-height: 1.6;
+
+            &:not(:first-child) {
+              padding-block-start: 1rem;
+            }
+          }
+
+          &-desc-list li {
+            @include mx.flexCenter;
+            font-size: 1.23rem;
+            padding-block: .3rem;
+
+            i {
+              font-size: .5rem;
+              padding-inline-end: 1rem;
+            }
           }
         }
       }
