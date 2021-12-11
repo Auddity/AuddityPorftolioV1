@@ -113,6 +113,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
+
+      .site-item-img {
+        height: 31rem;
+      }
     }
   }
 }
