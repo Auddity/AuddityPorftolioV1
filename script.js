@@ -59,6 +59,12 @@ inputs.forEach((input, idx) => {
       ? span.classList.remove('keyed')
       : span.classList.add('keyed');
   });
+  input.addEventListener('focus', () => {
+    span.style.opacity = '0.4';
+  });
+  input.addEventListener('blur', () => {
+    span.style.opacity = '1';
+  });
 });
 
 // Footer Date
