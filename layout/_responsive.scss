@@ -167,10 +167,15 @@
   }
 
   // Resume
+  .resume-item {
+    &-header h3 {
+      font-size: 2.8rem;
+    }
+  }
   .resume-item#item-1 {
     .resume-project {
       .resume-project-title {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
       }
 
       .resume-project-desc-list ul li {

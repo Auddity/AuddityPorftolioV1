@@ -41,11 +41,12 @@
       // Unique format for item-1
       &#item-1 {
         .resume-project {
-          padding-block-start: .7rem;
+          padding-block: .7rem 1rem;
 
           &-title {
             font-size: 1.25rem;
             line-height: 1.6;
+            text-decoration: underline;
 
             &:not(:first-child) {
               padding-block-start: 1rem;
