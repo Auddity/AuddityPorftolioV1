@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Freelance web developer and coder.  Containing resume, work examples, portfolio">
-  <meta name="keywords" content="Web Development, Web Design, Website, Websites, HTML, JavaScript, Css, CSS, SASS, Sass, Scss, Programming, Freelance, Freelancing, Sound Design, Sound Editor, Re-recording Mixer">
+  <meta name="keywords" content="Web Development, Web Design, Website, Websites, HTML, JavaScript, Css, CSS, SASS, Sass, Scss, React, Programming, Freelance, Freelancing, Sound Design, Sound Editor, Re-recording Mixer">
   <script src="https://kit.fontawesome.com/d5e4e8dd58.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +55,7 @@
       <div class="hero-content">
         <h2>Web Development</h2>
         <h2>Web Site Design</h2>
-        <p>HTML, CSS, SASS, JavaScript</p>
+        <p>HTML, CSS, SASS, JavaScript, REACT</p>
         <h2>Shopify Development</h2>
         <h2>Sound Design</h2>
       </div>
@@ -72,6 +72,17 @@
       </div>
 
       <div class="section-portfolio-content">
+        <a id="faq-link"
+          class="site-item"
+          href="https://fem-tip-calculator-react.vercel.app/"
+          target="_blank">
+          <img 
+            src="./imgs/SplitterAppScreenShot.png" alt="tip calculator built with React" class="site-item-img">
+          <div class="site-item-desc">
+            <h4 class="capitalize">Splitter Tip Calculator (React)</h4>
+          </div>
+        </a>
+
         <a id="stat-tracker-app"
           class="site-item"
           href="https://stat-tracker-app.vercel.app/"
@@ -136,16 +147,6 @@
           </div>
         </a>
 
-        <a id="faq-link"
-          class="site-item"
-          href="https://fem-faq-accordian-card.vercel.app/"
-          target="_blank">
-          <img 
-            src="./imgs/faq-accordian-fem-screenshot.png" alt="accordian card faq home page image" class="site-item-img">
-          <div class="site-item-desc">
-            <h4 class="capitalize">FAQ accordian component</h4>
-          </div>
-        </a>
       </div>
     </section>
     <!-- Portfolio END -->
@@ -166,8 +167,33 @@
           </div>
           <div class="resume-item-desc">
             <p>
-              Creating frontend projects for client and personal purposes.  Focusing on expanding my knowledge and skills in HTML, CSS, Sass(scss), and JavaScript.
+              Creating frontend projects for client and personal purposes.  Focusing on expanding my knowledge and skills in HTML, CSS, Sass(scss), JavaScript, and React.
             </p>
+            <div class="resume-project">
+              <h6 class="resume-project-title">
+                Splitter Tip Calculator 
+              </h6>
+              <div class="resume-project-desc-list">
+                <ul>
+                  <li>
+                    <i class="fas fa-circle"></i>
+                    Users can enter the bill total, select or enter a custom percentage to tip, and enter the number of people in the party.
+                  </li>
+                  <li>
+                    <i class="fas fa-circle"></i>
+                    useReducer controls state.
+                  </li>
+                  <li>
+                    <i class="fas fa-circle"></i>
+                    Controlled components.
+                  </li>
+                  <li>
+                    <i class="fas fa-circle"></i>
+                    Conditional rendering of elements and styles based on state.
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div class="resume-project">
               <h6 class="resume-project-title">
                 Team Stat Tracker WebApp
@@ -241,6 +267,10 @@
                   <li>
                     <i class="fas fa-circle"></i>
                     Allow user to search an IP address or a domain and displayed data in the DOM.
+                  </li>
+                  <li>
+                    <i class="fas fa-circle"></i>
+                    Used node.js to set up server.js file to make the API requests.
                   </li>
                 </ul>
                 <h6 class="resume-project-title">Spinner Website</h6>
